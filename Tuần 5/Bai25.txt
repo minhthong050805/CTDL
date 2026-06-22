@@ -1,0 +1,36 @@
+BẤT BIẾN THAM LAM CỦA DIJKSTRA
+================================
+
+Phát biểu:
+Khi một đỉnh u được lấy ra khỏi hàng đợi (có khoảng cách d[u] nhỏ nhất trong
+tập chưa chốt), thì d[u] chính là khoảng cách ngắn nhất thật sự từ nguồn s đến u.
+
+Chứng minh bằng quy nạp:
+
+Cơ sở:
+  Đầu tiên lấy nguồn s ra, d[s] = 0. Đúng vì không có đường nào ngắn hơn 0
+  khi tất cả trọng số >= 0.
+
+Bước quy nạp:
+  Giả sử tất cả đỉnh đã được chốt trước u đều có khoảng cách tối ưu.
+  Khi chốt u với d[u], mọi đường đi khác từ s đến u phải đi qua ít nhất
+  một đỉnh chưa chốt. Gọi x là đỉnh chưa chốt đầu tiên trên đường đó,
+  với tiền tố y (đã chốt).
+
+  Do trọng số >= 0:
+    d[x] >= d[u]   (vì u là đỉnh có d nhỏ nhất trong tập chưa chốt)
+
+  Suy ra:
+    độ dài đường = d[y] + w(y, x) + (phần còn lại >= 0) >= d[x] >= d[u]
+
+  Không có đường nào ngắn hơn d[u] => d[u] là tối ưu.
+
+Tại sao cần trọng số không âm?
+  Nếu có cạnh âm, một đỉnh đã chốt có thể được cập nhật thêm sau đó qua
+  cạnh âm, phá vỡ bảo đảm "đã chốt là tối ưu".
+
+  Ví dụ: d[1] được chốt = 2 (qua cạnh 0->1), nhưng sau đó phát hiện đường
+  0->2->1 = 5 + (-4) = 1 ngắn hơn. Dijkstra không quay lại cập nhật đỉnh
+  đã chốt, dẫn đến kết quả sai.
+
+  => Khi đồ thị có cạnh âm, dùng Bellman-Ford thay thế.
