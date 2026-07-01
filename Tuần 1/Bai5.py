@@ -1,0 +1,6 @@
+print("Tim kiem tuyen tinh khong bat buoc mang phai duoc sap xep truoc")
+print("Vi thuat toan chi duyet lan luot tung phan tu va so sanh voi x, khong quan tam thu tu")
+print("So sanh voi tim kiem nhi phan:")
+print("- Tim kiem nhi phan bat buoc mang phai duoc sap xep truoc")
+print("- Do phuc tap tim kiem tuyen tinh: O(n)")
+print("- Do phuc tap tim kiem nhi phan: O(log n)")

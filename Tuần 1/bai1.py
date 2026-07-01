@@ -1,10 +1,7 @@
-def tuyentinh(array, n, x):
-    for i in range(0, n):
-      if (array[i] == x):
-        return i
-      return -1
-array=[20,30,15,5,10,40]
-x=40
-n=len(array)
-result= tuyentinh(array,n,x)
-print("phan tu tim thay duoc tai vi tri la",result)
+print("Input: mang a gom n phan tu, gia tri can tim x")
+print("Output: vi tri dau tien cua x trong a, hoac -1 neu khong tim thay")
+print("Y tuong: duyet lan luot tu phan tu dau tien den phan tu cuoi cung cua mang,")
+print("so sanh moi phan tu a[i] voi x")
+print("Neu a[i] == x thi dung lai va tra ve vi tri i")
+print("Neu duyet het mang ma khong tim thay thi tra ve -1")
+print("Thuat toan dung lai trong 2 truong hop: tim thay x trong mang, hoac da duyet het mang")

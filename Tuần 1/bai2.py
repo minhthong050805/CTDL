@@ -1,23 +1,10 @@
-def tuyentinh(array, n, x):
-    for i in range(0, n):
-      if (array[i] == x):
-        return i
-    return -1
-array=[15,25,80,30,60,50,110,100,130,180]
-x=110;
-n=len(array)
-result= tuyentinh(array,n,x)
-print("phan tu tim thay duoc tai vi tri la",result)
-
-
-def tuyentinh(array, n, x):
-    for i in range(0, n):
-      if (array[i] == x):
-        return i
-    return -1
-array=[15,25,80,30,60,50,110,100,130,180]
-x=185;
-n=len(array)
-result= tuyentinh(array,n,x)
-print("phan tu tim thay duoc tai vi tri la",result)
-
+A = [7, 3, 9, 12, 5, 8, 1]
+x = 5
+ket_qua = -1
+for i in range(len(A)):
+    so_sanh = (A[i] == x)
+    print(f"i={i}, A[i]={A[i]}, A[i]==x? {so_sanh}")
+    if so_sanh:
+        ket_qua = i
+        break
+print("Vi tri tra ve:", ket_qua)

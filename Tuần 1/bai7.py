@@ -1,10 +1,9 @@
-def tontai(a, x):
-    for i in a:
-        if i == x:
+def ton_tai(a, x):
+    for i in range(len(a)):
+        if a[i] == x:
             return True
     return False
 
-a = [1, 2, 3, 4, 5]
-x = 3
-
-print(tontai(a, x))
+a = [3, 6, 1, 9, 4]
+print(ton_tai(a, 9))
+print(ton_tai(a, 100))
